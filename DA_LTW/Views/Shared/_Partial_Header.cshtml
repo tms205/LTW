@@ -1,0 +1,33 @@
+﻿
+
+
+<header class="bg-light border-bottom">
+    <div class="container py-3 d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+            <img src="~/Content/Img/Logo.png" alt="SmartRestaurant Logo"
+                 style="height:80px; width:80px; object-fit:contain; border-radius:70%; border:2px solid #fff; box-shadow:0 0 10px rgba(0,0,0,0.2);"
+                 class="me-2" />
+            <h3 class="m-0 text-dark fw-bold">SmartRestaurant</h3>
+        </div>
+        <!-- Thanh ngôn ngữ và đăng nhập -->
+        <div class="d-flex align-items-center">
+            <!-- Đổi ngôn ngữ -->
+            <a href="?lang=vi" class="text-secondary me-3">🇻🇳 VI</a>
+            <a href="?lang=en" class="text-secondary me-3">🇺🇸 EN</a>
+
+            <!-- Đăng nhập / Đăng ký -->
+            @if (Session["UserRole"] == null)
+            {
+                <a href="/TaiKhoan/DangNhap" class="btn btn-outline-primary btn-sm me-2">Đăng nhập</a>
+                <a href="/TaiKhoan/DangKy" class="btn btn-primary btn-sm">Đăng ký</a>
+            }
+            else
+            {
+                <span class="me-3">👋 Xin chào, <b>@Session["Username"]</b></span>
+                <a href="/TaiKhoan/DangXuat" class="btn btn-outline-danger btn-sm">Đăng xuất</a>
+            }
+        </div>
+    </div>
+</header>
+

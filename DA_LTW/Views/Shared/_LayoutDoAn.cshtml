@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "_LayoutDoAn";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>@ViewBag.Title - Smart Restaurant</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+</head>
+<body>
+    <!-- Header -->
+    @Html.Partial("_Partial_Header")
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">SmartRestaurant</a>
+            <ul class="navbar-nav ms-auto">
+                @*<li class="nav-item"><a href="/TrangChu" class="nav-link">@Resources.Lang.TrangChu</a></li>
+                <li class="nav-item"><a href="/MonAn" class="nav-link">@Resources.Lang.ThucDon</a></li>
+                <li class="nav-item"><a href="/TaiKhoan/DangNhap" class="nav-link">@Resources.Lang.DangNhap</a></li>*@
+                <li class="nav-item"><a href="/" class="nav-link">Trang chủ</a></li>
+                <li class="nav-item"><a href="/MonAn" class="nav-link">Thực đơn</a></li>
+                <li class="nav-item"><a href="/TaiKhoan/DangNhap" class="nav-link">Đăng nhập</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="container mt-4">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    @Html.Partial("_Partial_Footer")
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
+
+
