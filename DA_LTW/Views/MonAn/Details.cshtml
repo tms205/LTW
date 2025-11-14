@@ -1,0 +1,115 @@
+﻿@model DA_LTW.Models.MONAN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+    
+}
+
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="fw-bold text-primary">Chi tiết món ăn</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index", "MonAn")">Danh sách món ăn</a></li>
+                    <li class="breadcrumb-item active">Chi tiết</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-utensils me-2"></i>
+                        @Model.TenMon
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Mã món</label>
+                                <p class="form-control-plaintext border-bottom pb-2">@Model.MaMon</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Tên món</label>
+                                <p class="form-control-plaintext border-bottom pb-2">@Model.TenMon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label fw-bold text-muted">Mô tả món ăn</label>
+                            <p class="form-control-plaintext border-bottom pb-2">@Model.HinhAnh</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3 text-center">
+                            <label class="form-label fw-bold text-muted">Hình ảnh</label>
+                            <br />
+                            <img src="@Model.HinhAnh" class="img-fluid rounded shadow-sm"
+                                 style="max-height:300px; object-fit:cover;" />
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Giá</label>
+                                <p class="form-control-plaintext border-bottom pb-2 text-success fw-bold">
+                                    @string.Format("{0:N0} VNĐ", Model.Gia)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Đơn vị tính</label>
+                                <p class="form-control-plaintext border-bottom pb-2">@Model.DonViTinh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Trạng thái</label>
+                                <p class="form-control-plaintext border-bottom pb-2">
+                                    <span class="badge @(Model.TrangThai == "Còn món" ? "bg-success" : "bg-secondary") fs-6">
+                                        @(Model.TrangThai == "Còn món" ? "🟢 Còn món" : "⚫ Hết món")
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label fw-bold text-muted">Mã loại</label>
+                                <p class="form-control-plaintext border-bottom pb-2">@Model.MaLoai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light py-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            @Html.ActionLink("← Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
+                        </div>
+                        <div>
+                            @Html.ActionLink("✏️ Sửa thông tin", "Edit", new { id = Model.MaMon }, new { @class = "btn btn-warning me-2" })
+                            @Html.ActionLink("🗑️ Xóa", "Delete", new { id = Model.MaMon }, new { @class = "btn btn-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+﻿
+/* Create MonAn Page Styles */
+.create-monan-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .create-monan-card .card-header {
+        border-radius: 15px 15px 0 0 !important;
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+
+    .create-monan-card .form-control {
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+        .create-monan-card .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+    .create-monan-card .form-label {
+        color: #495057;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .create-monan-card .input-group-text {
+        background-color: #f8f9fa;
+        border: 2px solid #e9ecef;
+        border-left: none;
+        border-radius: 0 10px 10px 0;
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .create-monan-card .form-control-lg {
+        min-height: 50px;
+    }
+
+    .create-monan-card .btn-lg {
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .create-monan-card .btn-success {
+        background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        border: none;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    }
+
+        .create-monan-card .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        }
+
+    .create-monan-card .btn-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+        border: none;
+        box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+    }
+
+        .create-monan-card .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+        }
+
+    .create-monan-card .breadcrumb {
+        background: transparent;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    .create-monan-card .breadcrumb-item a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .create-monan-card .breadcrumb-item.active {
+        color: #6c757d;
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .create-monan-card .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .create-monan-card .form-control-lg {
+        min-height: 45px;
+        font-size: 14px;
+    }
+
+    .create-monan-card .btn-lg {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Animation for form elements */
+.create-monan-card .form-group {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Validation styles */
+.create-monan-card .text-danger {
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.create-monan-card .alert-danger {
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    font-weight: 500;
+}

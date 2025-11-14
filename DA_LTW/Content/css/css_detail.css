@@ -1,0 +1,21 @@
+﻿<style >
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+}
+
+.form-control-plaintext {
+    min-height: 40px;
+    padding: 8px 0;
+    font-size: 16px;
+}
+
+.border-bottom {
+    border-color: #e9ecef !important;
+}
+
+</style >
