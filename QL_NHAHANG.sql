@@ -1,14 +1,14 @@
--- =============================================
--- TẠO CSDL
--- =============================================
+/* ==========================================================
+   TẠO DATABASE
+   ========================================================== */
 CREATE DATABASE QL_NHAHANG;
 GO
 USE QL_NHAHANG;
 GO
 
--- =============================================
--- 1. KHÁCH HÀNG
--- =============================================
+/* ==========================================================
+   1. KHÁCH HÀNG
+   ========================================================== */
 CREATE TABLE KHACHHANG
 (
     MaKH VARCHAR(10) PRIMARY KEY,
@@ -19,9 +19,9 @@ CREATE TABLE KHACHHANG
 );
 GO
 
--- =============================================
--- 2. BÀN ĂN
--- =============================================
+/* ==========================================================
+   2. BÀN ĂN
+   ========================================================== */
 CREATE TABLE BANAN
 (
     MaBan VARCHAR(10) PRIMARY KEY,
@@ -31,9 +31,9 @@ CREATE TABLE BANAN
 );
 GO
 
--- =============================================
--- 3. LOẠI MÓN
--- =============================================
+/* ==========================================================
+   3. LOẠI MÓN
+   ========================================================== */
 CREATE TABLE LOAIMON
 (
     MaLoai VARCHAR(10) PRIMARY KEY,
@@ -41,9 +41,9 @@ CREATE TABLE LOAIMON
 );
 GO
 
--- =============================================
--- 4. MÓN ĂN
--- =============================================
+/* ==========================================================
+   4. MÓN ĂN (ĐÃ GỘP MÔ TẢ + HÌNH ẢNH)
+   ========================================================== */
 CREATE TABLE MONAN
 (
     MaMon VARCHAR(10) PRIMARY KEY,
@@ -51,25 +51,28 @@ CREATE TABLE MONAN
     Gia INT CHECK(Gia > 0),
     DonViTinh NVARCHAR(30),
     TrangThai NVARCHAR(30) DEFAULT N'Còn món',
-    MaLoai VARCHAR(10) FOREIGN KEY REFERENCES LOAIMON(MaLoai)
+    MaLoai VARCHAR(10) FOREIGN KEY REFERENCES LOAIMON(MaLoai),
+    MoTa NVARCHAR(255) NULL,
+    HinhAnh NVARCHAR(255) NULL   -- GỘP ẢNH Ở ĐÂY
 );
 GO
 
--- =============================================
--- 5. NHÂN VIÊN
--- =============================================
+/* ==========================================================
+   5. NHÂN VIÊN
+   ========================================================== */
 CREATE TABLE NHANVIEN
 (
     MaNV VARCHAR(10) PRIMARY KEY,
     HoTen NVARCHAR(50) NOT NULL,
-    VaiTro NVARCHAR(30) CHECK (VaiTro IN (N'Thu ngân', N'Phục vụ', N'Bếp', N'Thủ kho', N'Quản lý')),
+    VaiTro NVARCHAR(30) CHECK (VaiTro IN 
+        (N'Thu ngân', N'Phục vụ', N'Bếp', N'Thủ kho', N'Quản lý')),
     Luong INT CHECK (Luong >= 0)
 );
 GO
 
--- =============================================
--- 6. ĐẶT BÀN
--- =============================================
+/* ==========================================================
+   6. ĐẶT BÀN
+   ========================================================== */
 CREATE TABLE DATBAN
 (
     MaDatBan VARCHAR(10) PRIMARY KEY,
@@ -81,9 +84,9 @@ CREATE TABLE DATBAN
 );
 GO
 
--- =============================================
--- 7. HÓA ĐƠN
--- =============================================
+/* ==========================================================
+   7. HÓA ĐƠN
+   ========================================================== */
 CREATE TABLE HOADON
 (
     MaHD VARCHAR(10) PRIMARY KEY,
@@ -95,9 +98,9 @@ CREATE TABLE HOADON
 );
 GO
 
--- =============================================
--- 8. CHI TIẾT HÓA ĐƠN
--- =============================================
+/* ==========================================================
+   8. CHI TIẾT HÓA ĐƠN
+   ========================================================== */
 CREATE TABLE CHITIETHOADON
 (
     MaHD VARCHAR(10),
@@ -111,24 +114,99 @@ CREATE TABLE CHITIETHOADON
 );
 GO
 
--- =============================================
--- 9. TÀI KHOẢN
--- =============================================
+/* ==========================================================
+   9. TÀI KHOẢN
+   ========================================================== */
 CREATE TABLE TAIKHOAN
 (
     TenDangNhap NVARCHAR(50) PRIMARY KEY,
     MatKhau NVARCHAR(200) NOT NULL,
     MaNV VARCHAR(10) NULL FOREIGN KEY REFERENCES NHANVIEN(MaNV),
     MaKH VARCHAR(10) NULL FOREIGN KEY REFERENCES KHACHHANG(MaKH),
-    Quyen NVARCHAR(50) CHECK (Quyen IN (N'Admin', N'User', N'Guest'))
+    Quyen NVARCHAR(50) CHECK (Quyen IN ('Admin','User','Guest'))
 );
 GO
 
--- =============================================
--- DỮ LIỆU MẪU
--- =============================================
+/* ==========================================================
+   10. NGUYÊN LIỆU
+   ========================================================== */
+CREATE TABLE NGUYENLIEU
+(
+    MaNL VARCHAR(10) PRIMARY KEY,
+    TenNL NVARCHAR(100) NOT NULL,
+    DonViTinh NVARCHAR(20),
+    SoLuongTon INT DEFAULT 0 CHECK (SoLuongTon >= 0),
+    MucCanhBao INT DEFAULT 10
+);
+GO
 
--- KHÁCH HÀNG
+/* ==========================================================
+   11. MÓN – NGUYÊN LIỆU
+   ========================================================== */
+CREATE TABLE MONAN_NGUYENLIEU
+(
+    MaMon VARCHAR(10) FOREIGN KEY REFERENCES MONAN(MaMon),
+    MaNL VARCHAR(10) FOREIGN KEY REFERENCES NGUYENLIEU(MaNL),
+    SoLuong INT CHECK (SoLuong > 0),
+    PRIMARY KEY(MaMon, MaNL)
+);
+GO
+
+/* ==========================================================
+   12. PHIẾU NHẬP KHO
+   ========================================================== */
+CREATE TABLE PHIEUNHAPKHO
+(
+    MaPN VARCHAR(10) PRIMARY KEY,
+    NgayNhap DATE DEFAULT GETDATE(),
+    MaNV VARCHAR(10) FOREIGN KEY REFERENCES NHANVIEN(MaNV)
+);
+GO
+
+/* ==========================================================
+   13. CHI TIẾT NHẬP KHO
+   ========================================================== */
+CREATE TABLE CHITIET_NHAPKHO
+(
+    MaPN VARCHAR(10) FOREIGN KEY REFERENCES PHIEUNHAPKHO(MaPN),
+    MaNL VARCHAR(10) FOREIGN KEY REFERENCES NGUYENLIEU(MaNL),
+    SoLuong INT CHECK (SoLuong > 0),
+    DonGia INT CHECK (DonGia >= 0),
+    PRIMARY KEY(MaPN, MaNL)
+);
+GO
+
+/* ==========================================================
+   14. NHẬT KÝ PHÂN QUYỀN
+   ========================================================== */
+CREATE TABLE NHATKY_PHANQUYEN
+(
+    ID INT IDENTITY PRIMARY KEY,
+    AdminThucHien NVARCHAR(50) FOREIGN KEY REFERENCES TAIKHOAN(TenDangNhap),
+    NguoiDuocGiao NVARCHAR(50) FOREIGN KEY REFERENCES TAIKHOAN(TenDangNhap),
+    QuyenCu NVARCHAR(50),
+    QuyenMoi NVARCHAR(50),
+    ThoiGian DATETIME DEFAULT GETDATE()
+);
+GO
+
+/* ==========================================================
+   15. NHẬT KÝ ĐĂNG NHẬP
+   ========================================================== */
+CREATE TABLE NHATKY_DANGNHAP
+(
+    ID INT IDENTITY PRIMARY KEY,
+    TenDangNhap NVARCHAR(50),
+    ThoiGian DATETIME DEFAULT GETDATE(),
+    DiaChiIP NVARCHAR(50)
+);
+GO
+
+/* ==========================================================
+   DỮ LIỆU MẪU
+   ========================================================== */
+
+/* --- KHÁCH HÀNG --- */
 INSERT INTO KHACHHANG VALUES
 ('KH01', N'Nguyễn Văn A', '0909123456', N'Thân thiết', 120),
 ('KH02', N'Lê Thị B', '0912345678', N'Vãng lai', 0),
@@ -137,7 +215,7 @@ INSERT INTO KHACHHANG VALUES
 ('KH05', N'Hoàng Thị E', '0933555777', N'Thân thiết', 90);
 GO
 
--- BÀN ĂN
+/* --- BÀN ĂN --- */
 INSERT INTO BANAN VALUES
 ('B01', N'Bàn 1', 4, N'Đang dùng'),
 ('B02', N'Bàn 2', 4, N'Trống'),
@@ -146,7 +224,7 @@ INSERT INTO BANAN VALUES
 ('B05', N'Bàn VIP 1', 8, N'Đang dùng');
 GO
 
--- LOẠI MÓN
+/* --- LOẠI MÓN --- */
 INSERT INTO LOAIMON VALUES
 ('LM01', N'Món chính'),
 ('LM02', N'Món khai vị'),
@@ -155,16 +233,143 @@ INSERT INTO LOAIMON VALUES
 ('LM05', N'Món chay');
 GO
 
--- MÓN ĂN (đã sửa lỗi tham số)
-INSERT INTO MONAN VALUES
-('MA01', N'Cơm chiên hải sản', 50000, N'Phần', N'Còn món', 'LM01'),
-('MA02', N'Gỏi cuốn tôm thịt', 30000, N'Phần', N'Còn món', 'LM02'),
-('MA03', N'Bánh flan', 20000, N'Phần', N'Còn món', 'LM03'),
-('MA04', N'Sinh tố bơ', 35000, N'Ly', N'Còn món', 'LM04'),
-('MA05', N'Đậu hủ chiên sả ớt', 40000, N'Phần', N'Còn món', 'LM05');
+/* ============================
+   MÓN ĂN (20 món – phân đúng 5 loại)
+   ============================ */
+INSERT INTO MONAN 
+(MaMon, TenMon, Gia, DonViTinh, TrangThai, MaLoai, MoTa, HinhAnh) VALUES
+
+/* ====================== LM01 – MÓN CHÍNH ====================== */
+('MA01', N'Cơm chiên hải sản', 50000, N'Phần', N'Còn món', 'LM01',
+N'Cơm chiên tôm và mực tươi, hạt cơm tơi, thơm mùi tỏi phi. 
+Gia vị đậm đà, không quá dầu mỡ. 
+Phù hợp cho mọi bữa ăn trong ngày.
+Món được yêu thích tại nhà hàng.',
+'/img/monan/comchien.jpg'),
+
+('MA02', N'Phở bò tái', 60000, N'Bát', N'Còn món', 'LM01',
+N'Nước dùng được hầm từ xương bò trong nhiều giờ. 
+Thịt bò tái mềm, tươi, kết hợp hương vị quế – hồi. 
+Sợi phở mềm, thơm mùi gạo đặc trưng.
+Món Việt truyền thống.',
+'/img/monan/phobo.jpg'),
+
+('MA03', N'Mì cay hải sản', 60000, N'Tô', N'Còn món', 'LM01',
+N'Hải sản tươi: tôm, mực, nghêu hòa trong nước dùng cay đậm đà. 
+Cấp độ cay có thể tùy chọn theo sở thích. 
+Phong cách Hàn Quốc được giới trẻ yêu thích.',
+'/img/monan/micay.jpg'),
+
+('MA04', N'Sườn nướng BBQ', 85000, N'Phần', N'Còn món', 'LM01',
+N'Sườn heo được ướp sốt BBQ đặc biệt, nướng thơm lừng. 
+Thịt mềm, thấm gia vị, không bị khô. 
+Phù hợp dùng cùng khoai tây hoặc salad.',
+'/img/monan/suonbbq.jpg'),
+
+/* ====================== LM02 – KHAI VỊ ====================== */
+('MA05', N'Gỏi cuốn tôm thịt', 30000, N'Phần', N'Còn món', 'LM02',
+N'Bánh tráng mềm cuốn tôm, thịt, bún và rau sống. 
+Chấm cùng nước mắm chua ngọt chuẩn vị Nam. 
+Món nhẹ, ít dầu mỡ, dễ ăn.',
+'/img/monan/goicuon.jpg'),
+
+('MA06', N'Khoai tây chiên', 25000, N'Đĩa', N'Còn món', 'LM02',
+N'Khoai chiên vàng giòn bên ngoài, mềm bên trong. 
+Không thấm nhiều dầu, phù hợp mọi lứa tuổi. 
+Món khai vị phổ biến nhất.',
+'/img/monan/khoaitaychien.jpg'),
+
+('MA07', N'Salad trộn dầu giấm', 30000, N'Đĩa', N'Còn món', 'LM02',
+N'Rau củ tươi giòn, được rửa sạch bằng công nghệ ozone. 
+Dầu giấm pha chế chua nhẹ, giúp kích thích vị giác. 
+Tốt cho sức khỏe và hệ tiêu hóa.',
+'/img/monan/salad.jpg'),
+
+('MA08', N'Da cá chiên giòn', 35000, N'Phần', N'Còn món', 'LM02',
+N'Da cá hồi chiên giòn rụm, tẩm muối tiêu nhẹ. 
+Giòn tan và thơm đặc trưng. 
+Món nhắm lý tưởng cho mọi bữa tiệc.',
+'/img/monan/daca.jpg'),
+
+/* ====================== LM03 – TRÁNG MIỆNG ====================== */
+('MA09', N'Bánh flan caramel', 20000, N'Phần', N'Còn món', 'LM03',
+N'Flan mềm mịn, tan ngay khi đưa vào miệng. 
+Caramel thơm nhẹ, ngọt vừa. 
+Món tráng miệng phù hợp mọi lứa tuổi.',
+'/img/monan/flan.jpg'),
+
+('MA10', N'Chè khúc bạch', 28000, N'Ly', N'Còn món', 'LM03',
+N'Khúc bạch thơm sữa, mềm nhưng không bở. 
+Nước chè thanh mát với nhãn và hạnh nhân rang. 
+Thích hợp dùng lạnh trong ngày nóng.',
+'/img/monan/khuclbach.jpg'),
+
+('MA11', N'Tào phớ nóng', 20000, N'Bát', N'Còn món', 'LM03',
+N'Tào phớ mịn, béo nhẹ vị đậu nành. 
+Nước đường gừng ấm, thơm dịu. 
+Món tráng miệng truyền thống Việt Nam.',
+'/img/monan/taopho.jpg'),
+
+('MA12', N'Kem vani socola', 25000, N'Ly', N'Còn món', 'LM03',
+N'Kem vani mát lạnh kết hợp sốt socola đậm đà. 
+Topping cốm hoặc đậu phộng tùy chọn. 
+Phù hợp trẻ nhỏ và gia đình.',
+'/img/monan/kemvani.jpg'),
+
+/* ====================== LM04 – ĐỒ UỐNG ====================== */
+('MA13', N'Sinh tố bơ', 35000, N'Ly', N'Còn món', 'LM04',
+N'Sinh tố bơ sáp nguyên chất, béo mịn. 
+Không pha loãng, giữ nguyên hương vị tự nhiên. 
+Giúp bổ sung năng lượng và vitamin.',
+'/img/monan/sinhobo.jpg'),
+
+('MA14', N'Cà phê sữa đá', 25000, N'Ly', N'Còn món', 'LM04',
+N'Cà phê phin đậm vị kết hợp sữa đặc ngọt béo. 
+Thức uống quen thuộc của người Việt. 
+Giúp tỉnh táo và tập trung.',
+'/img/monan/cafesua.jpg'),
+
+('MA15', N'Trà chanh mật ong', 30000, N'Ly', N'Còn món', 'LM04',
+N'Trà xanh thanh mát hòa với mật ong rừng. 
+Thêm lát chanh vàng tạo hương thơm tự nhiên. 
+Giải nhiệt tuyệt vời.',
+'/img/monan/trachanh.jpg'),
+
+('MA16', N'Nước cam ép', 35000, N'Ly', N'Còn món', 'LM04',
+N'Nước cam vắt từ cam tươi 100%. 
+Bổ sung vitamin C, tốt cho sức khỏe. 
+Không đường cho khách ăn kiêng.',
+'/img/monan/nuoccam.jpg'),
+
+/* ====================== LM05 – MÓN CHAY ====================== */
+('MA17', N'Đậu hũ chiên sả ớt', 40000, N'Phần', N'Còn món', 'LM05',
+N'Đậu hũ chiên vàng, giòn nhẹ. 
+Sả ớt phi thơm tạo hương vị hấp dẫn. 
+Món chay ngon, dễ ăn và giàu dinh dưỡng.',
+'/img/monan/dauhu.jpg'),
+
+('MA18', N'Đậu hũ sốt cà chua', 35000, N'Phần', N'Còn món', 'LM05',
+N'Món đậu hũ mềm được chiên sơ rồi sốt cà chua. 
+Vị chua ngọt dễ ăn, quen thuộc trong bữa cơm Việt. 
+Thích hợp người ăn chay.',
+'/img/monan/dauhusot.jpg'),
+
+('MA19', N'Rau củ xào thập cẩm', 45000, N'Đĩa', N'Còn món', 'LM05',
+N'Bông cải, cà rốt, nấm, đậu que xào giòn nhẹ. 
+Ít dầu mỡ, nhiều chất xơ. 
+Hương vị thanh đạm nhưng hấp dẫn.',
+'/img/monan/raucuxao.jpg'),
+
+('MA20', N'Lẩu nấm chay', 120000, N'Nồi', N'Còn món', 'LM05',
+N'Nước dùng từ rau củ hầm trong nhiều giờ. 
+Kết hợp nấm kim châm, nấm đùi gà, nấm đông cô. 
+Món lẩu thanh mát, tốt cho sức khỏe.',
+'/img/monan/launam.jpg');
+
 GO
 
--- NHÂN VIÊN
+
+/* --- NHÂN VIÊN --- */
 INSERT INTO NHANVIEN VALUES
 ('NV01', N'Trần Thị B', N'Thu ngân', 8000000),
 ('NV02', N'Nguyễn Minh C', N'Phục vụ', 7000000),
@@ -173,7 +378,7 @@ INSERT INTO NHANVIEN VALUES
 ('NV05', N'Võ Hoàng F', N'Quản lý', 12000000);
 GO
 
--- ĐẶT BÀN
+/* --- ĐẶT BÀN --- */
 INSERT INTO DATBAN VALUES
 ('DB01', 'KH01', 'B01', '2025-10-20', '18:30', N'Đang dùng'),
 ('DB02', 'KH02', 'B02', '2025-10-20', '19:00', N'Đang dùng'),
@@ -182,7 +387,7 @@ INSERT INTO DATBAN VALUES
 ('DB05', 'KH05', 'B05', '2025-10-20', '18:00', N'Đang dùng');
 GO
 
--- HÓA ĐƠN
+/* --- HÓA ĐƠN --- */
 INSERT INTO HOADON VALUES
 ('HD01', 'DB01', 'NV01', '2025-10-20', 85000, N'Tiền mặt'),
 ('HD02', 'DB02', 'NV01', '2025-10-20', 120000, N'Tiền mặt'),
@@ -191,7 +396,7 @@ INSERT INTO HOADON VALUES
 ('HD05', 'DB04', 'NV01', '2025-10-18', 0, N'Hủy');
 GO
 
--- CHI TIẾT HÓA ĐƠN
+/* --- CHI TIẾT HÓA ĐƠN --- */
 INSERT INTO CHITIETHOADON (MaHD, MaMon, SoLuong, DonGia) VALUES
 ('HD01', 'MA01', 1, 50000),
 ('HD01', 'MA02', 1, 30000),
@@ -205,7 +410,7 @@ INSERT INTO CHITIETHOADON (MaHD, MaMon, SoLuong, DonGia) VALUES
 ('HD04', 'MA02', 1, 30000);
 GO
 
--- TÀI KHOẢN
+/* --- TÀI KHOẢN --- */
 INSERT INTO TAIKHOAN VALUES
 (N'admin',    	N'123456', 'NV05', NULL, N'Admin'),
 (N'thungan01',	N'pass01', 'NV01', NULL, N'User'),
@@ -217,4 +422,20 @@ INSERT INTO TAIKHOAN VALUES
 (N'khach03',  	N'3333', NULL, 'KH03', N'Guest'),
 (N'khach04',  	N'4444', NULL, 'KH04', N'Guest'),
 (N'khach05',  	N'5555', NULL, 'KH05', N'Guest');
+GO
+
+/* ==========================================================
+   TRIGGER TRỪ NGUYÊN LIỆU KHI BÁN MÓN
+   ========================================================== */
+CREATE TRIGGER TRG_TruKhoSauKhiBan
+ON CHITIETHOADON
+AFTER INSERT
+AS
+BEGIN
+    UPDATE NL
+    SET NL.SoLuongTon = NL.SoLuongTon - (i.SoLuong * mnl.SoLuong)
+    FROM NGUYENLIEU NL
+    JOIN MONAN_NGUYENLIEU mnl ON NL.MaNL = mnl.MaNL
+    JOIN inserted i ON i.MaMon = mnl.MaMon;
+END
 GO
