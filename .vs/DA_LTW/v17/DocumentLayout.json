@@ -1,0 +1,445 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\ltw\\DA_LTW\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_footer_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_footer_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_header_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_header_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_layouttrangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_layouttrangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\ltw\\da_ltw\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_guestlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_guestlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_layoutdoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_layoutdoan.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\css\\css_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\css\\css_detail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\css\\css_create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\css\\css_create.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\css\\css_sidebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\css\\css_sidebar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\content\\site.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\site.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\shared\\_partial_banner_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_banner_guest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:controllers\\trangchucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\controllers\\monancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:controllers\\monancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\monan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\monan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\ltw\\DA_LTW\\views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "Content\\bootstrap.min.css",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\bootstrap.min.css",
+              "RelativeToolTip": "Content\\bootstrap.min.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAxWQIA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-16T09:56:26.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutTrangChu.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutTrangChu.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_LayoutTrangChu.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutTrangChu.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACkAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:19:18.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Partial_Footer_Guest.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Footer_Guest.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Footer_Guest.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Footer_Guest.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Footer_Guest.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:13:25.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Site.css",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\Site.css",
+              "RelativeDocumentMoniker": "Content\\Site.css",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\Site.css",
+              "RelativeToolTip": "Content\\Site.css",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAACgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-14T08:32:11.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Partial_Header_Guest.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Header_Guest.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Header_Guest.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Header_Guest.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Header_Guest.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAoAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:12:35.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Partial_Footer.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Footer.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Footer.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Footer.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Footer.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:43:07.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TaiKhoanController.cs",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Controllers\\TaiKhoanController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaiKhoanController.cs",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Controllers\\TaiKhoanController.cs",
+              "RelativeToolTip": "Controllers\\TaiKhoanController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwBUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:25:10.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_Partial_Banner_Guest.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Banner_Guest.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Banner_Guest.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Banner_Guest.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Banner_Guest.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAEBlwAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:38:56.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "site.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\site.cshtml",
+              "RelativeDocumentMoniker": "Content\\site.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\site.cshtml",
+              "RelativeToolTip": "Content\\site.cshtml",
+              "ViewState": "AQIAAFAAAAAAAAAAAABRwFwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T08:14:25.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T09:15:31.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\TrangChu\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\TrangChu\\Index.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\TrangChu\\Index.cshtml",
+              "RelativeToolTip": "Views\\TrangChu\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:18:00.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "TrangChuController.cs",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Controllers\\TrangChuController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TrangChuController.cs",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Controllers\\TrangChuController.cs",
+              "RelativeToolTip": "Controllers\\TrangChuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T07:16:41.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_GuestLayout.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_GuestLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_GuestLayout.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_GuestLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_GuestLayout.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACQAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T07:14:14.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Partial_Header.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Header.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Header.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Header.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Header.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T08:29:33.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\ltw\\DA_LTW\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T07:39:02.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AQIAADUAAAAAAAAAAAAmwD8AAABzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-11-14T06:50:28.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "css_create.css",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\css\\css_create.css",
+              "RelativeDocumentMoniker": "Content\\css\\css_create.css",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\css\\css_create.css",
+              "RelativeToolTip": "Content\\css\\css_create.css",
+              "ViewState": "AQIAAIAAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-14T04:14:00.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\MonAn\\Create.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Create.cshtml",
+              "RelativeToolTip": "Views\\MonAn\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T04:07:03.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "css_detail.css",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\css\\css_detail.css",
+              "RelativeDocumentMoniker": "Content\\css\\css_detail.css",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\css\\css_detail.css",
+              "RelativeToolTip": "Content\\css\\css_detail.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-14T04:04:02.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\MonAn\\Index.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Index.cshtml",
+              "RelativeToolTip": "Views\\MonAn\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T00:12:23.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\MonAn\\Details.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\MonAn\\Details.cshtml",
+              "RelativeToolTip": "Views\\MonAn\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T03:47:05.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "css_sidebar.css",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Content\\css\\css_sidebar.css",
+              "RelativeDocumentMoniker": "Content\\css\\css_sidebar.css",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Content\\css\\css_sidebar.css",
+              "RelativeToolTip": "Content\\css\\css_sidebar.css",
+              "ViewState": "AQIAAAcAAAAAAAAAAIBJwCIAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-14T00:34:38.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_LayoutDoAn.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_LayoutDoAn.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutDoAn.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_LayoutDoAn.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutDoAn.cshtml",
+              "ViewState": "AQIAACYAAAAAAAAAAADwv0QAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T00:24:57.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Partial_Sidebar_Admin.cshtml",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAEBVwBAAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T00:24:21.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MonAnController.cs",
+              "DocumentMoniker": "C:\\ltw\\DA_LTW\\Controllers\\MonAnController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MonAnController.cs",
+              "ToolTip": "C:\\ltw\\DA_LTW\\Controllers\\MonAnController.cs",
+              "RelativeToolTip": "Controllers\\MonAnController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T01:59:18.657Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
