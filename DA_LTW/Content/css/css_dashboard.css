@@ -1,0 +1,153 @@
+﻿/* dashboard.css */
+.dashboard {
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+    /* Tiêu đề */
+    .dashboard h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+
+/* Thẻ thống kê */
+.stats-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+    .stats-cards .card {
+        flex: 1 1 calc(25% - 20px);
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.2s ease;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .stats-cards .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stats-cards .card h3 {
+            font-size: 1.2rem;
+            margin: 10px 0 0 0;
+            font-weight: bold;
+        }
+
+        .stats-cards .card p {
+            font-size: 0.9rem;
+            margin: 5px 0 0 0;
+            color: #666;
+        }
+
+/* Màu thẻ */
+.card-success {
+    background-color: #e6f4ea;
+    color: #28a745;
+    border-left: 4px solid #28a745;
+}
+
+.card-primary {
+    background-color: #e6f0fa;
+    color: #007bff;
+    border-left: 4px solid #007bff;
+}
+
+.card-warning {
+    background-color: #fff4e6;
+    color: #ffc107;
+    border-left: 4px solid #ffc107;
+}
+
+.card-danger {
+    background-color: #fde6e6;
+    color: #dc3545;
+    border-left: 4px solid #dc3545;
+}
+
+/* Container biểu đồ */
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Khung chứa biểu đồ */
+.chart-box {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .chart-box h3 {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+/* Biểu đồ - KÍCH THƯỚC NHỎ HƠN */
+.chart-container {
+    position: relative;
+    height: 200px; /* Giảm chiều cao biểu đồ */
+    width: 100%;
+}
+
+/* Đảm bảo canvas biểu đồ có kích thước nhỏ */
+.chart-box canvas {
+    max-height: 180px !important;
+    width: 100% !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-cards .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .chart-box {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+
+    .chart-container {
+        height: 180px;
+    }
+}
+
+@media (max-width: 575px) {
+    .stats-cards .card {
+        flex: 1 1 100%;
+    }
+
+        .stats-cards .card h3 {
+            font-size: 1.1rem;
+        }
+
+        .stats-cards .card p {
+            font-size: 0.85rem;
+        }
+
+    .chart-box h3 {
+        font-size: 0.9rem;
+    }
+
+    .chart-container {
+        height: 160px;
+    }
+}

@@ -1,0 +1,45 @@
+﻿@model DA_LTW.Models.MONAN
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+
+<div class="container mt-4">
+    <h2 class="text-danger fw-bold">Xác nhận xóa món ăn</h2>
+
+    <div class="alert alert-warning mt-3">
+        <h4>Bạn có chắc chắn muốn xóa món ăn này?</h4>
+        <p><strong>@Model.TenMon</strong></p>
+    </div>
+
+    <dl class="row">
+        <dt class="col-sm-3">Mã món:</dt>
+        <dd class="col-sm-9">@Model.MaMon</dd>
+
+        <dt class="col-sm-3">Giá:</dt>
+        <dd class="col-sm-9">@Model.Gia VNĐ</dd>
+
+        <dt class="col-sm-3">Trạng thái:</dt>
+        <dd class="col-sm-9">@Model.TrangThai</dd>
+
+        <dt class="col-sm-3">Hình ảnh:</dt>
+        <dd class="col-sm-9">
+            <img src="@Model.HinhAnh" alt="Ảnh món ăn" style="max-width:150px; border-radius:8px;" />
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("Delete", "MonAn", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" name="id" value="@Model.MaMon" />
+
+        <button type="submit" class="btn btn-danger btn-lg">
+            <i class="fas fa-trash"></i> Xóa món ăn
+        </button>
+
+        @Html.ActionLink("Hủy", "Index", null, new { @class = "btn btn-secondary btn-lg ms-2" })
+    }
+</div>

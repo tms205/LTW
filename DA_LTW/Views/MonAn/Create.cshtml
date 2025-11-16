@@ -1,9 +1,9 @@
 ﻿@model DA_LTW.Models.MONAN
 
-@{
-    ViewBag.Title = "Thêm món ăn mới";
+    @{
+        ViewBag.Title = "Thêm món ăn mới";
     Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
-}
+    }
 
 <div class="container-fluid">
     <div class="row mb-4">
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="card-body p-4">
-                    @using (Html.BeginForm())
+                    @using (Html.BeginForm("Create", "MonAn", FormMethod.Post, new { enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
 
@@ -38,7 +38,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.MaMon, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Mã món</label>
                                     @Html.EditorFor(model => model.MaMon, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Nhập mã món" } })
                                     @Html.ValidationMessageFor(model => model.MaMon, "", new { @class = "text-danger small" })
                                 </div>
@@ -46,7 +46,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.TenMon, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Tên món</label>
                                     @Html.EditorFor(model => model.TenMon, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Nhập tên món ăn" } })
                                     @Html.ValidationMessageFor(model => model.TenMon, "", new { @class = "text-danger small" })
                                 </div>
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.Gia, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Giá thành</label>
                                     <div class="input-group">
                                         @Html.EditorFor(model => model.Gia, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "0", type = "number" } })
                                         <span class="input-group-text">VNĐ</span>
@@ -67,26 +67,27 @@
 
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.DonViTinh, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Đơn vị tính</label>
                                     @Html.EditorFor(model => model.DonViTinh, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Ví dụ: phần, đĩa, bát..." } })
                                     @Html.ValidationMessageFor(model => model.DonViTinh, "", new { @class = "text-danger small" })
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(m => m.MoTa)
+                            <label class="form-label fw-bold">Mô tả</label>
                             @Html.TextAreaFor(m => m.MoTa, new { @class = "form-control", rows = 5 })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.HinhAnh)
-                            @Html.TextBoxFor(m => m.HinhAnh, new { @class = "form-control", placeholder = "/img/monan/abc.jpg" })
+                        <div class="form-group mb-3">
+                            <label class="form-label fw-bold">Hình ảnh món ăn</label>
+                            <input type="file" name="fileUpload" class="form-control" accept="image/*" />
                         </div>
+
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.TrangThai, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Trạng thái</label>
                                     @Html.DropDownListFor(model => model.TrangThai,
                                         new List<SelectListItem>
                                         {
@@ -102,7 +103,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group mb-3">
-                                    @Html.LabelFor(model => model.MaLoai, htmlAttributes: new { @class = "form-label fw-bold" })
+                                    <label class="form-label fw-bold">Mã loại món ăn</label>
                                     @Html.EditorFor(model => model.MaLoai, new { htmlAttributes = new { @class = "form-control form-control-lg", placeholder = "Nhập mã loại" } })
                                     @Html.ValidationMessageFor(model => model.MaLoai, "", new { @class = "text-danger small" })
                                 </div>

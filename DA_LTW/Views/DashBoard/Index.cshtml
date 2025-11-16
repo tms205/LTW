@@ -1,0 +1,165 @@
+﻿@model DA_LTW.Models.DashboardViewModel
+
+@{
+    ViewBag.Title = "Trang chủ quản lý nhà hàng";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<!-- Gọi CSS riêng -->
+<link href="~/Content/dashboard.css" rel="stylesheet" />
+
+<div class="dashboard">
+    <h2>📊 Trang chủ quản lý nhà hàng</h2>
+
+    <!-- THẺ THỐNG KÊ -->
+    <div class="stats-cards">
+        <div class="card card-success">
+            <h3>@Model.DoanhThuHomNay.ToString("N0") VNĐ</h3>
+            <p>Doanh thu hôm nay</p>
+        </div>
+        <div class="card card-primary">
+            <h3>@Model.SoBanDangDung</h3>
+            <p>Bàn đang phục vụ</p>
+        </div>
+        <div class="card card-warning">
+            <h3>@Model.DatBanHomNay</h3>
+            <p>Đặt bàn hôm nay</p>
+        </div>
+        <div class="card card-danger">
+            <h3>@Model.NguyenLieuSapHet</h3>
+            <p>Nguyên liệu sắp hết</p>
+        </div>
+    </div>
+
+    <!-- BIỂU ĐỒ -->
+    <div class="charts">
+        <div class="chart-box">
+            <h3>📈 Doanh thu 7 ngày gần nhất</h3>
+            <div class="chart-container">
+                <canvas id="chartRevenue"></canvas>
+            </div>
+        </div>
+        <div class="chart-box">
+            <h3>🥗 Tỷ lệ bán theo loại món</h3>
+            <div class="chart-container">
+                <canvas id="chartLoaiMon"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+@section Scripts {
+    <script>
+    // --- Doanh thu 7 ngày ---
+    const revenueLabels = @Html.Raw(
+        Newtonsoft.Json.JsonConvert.SerializeObject(
+            (Model.DoanhThuTuan ?? new List<DA_LTW.Models.ChartItem>())
+                .Select(x => x.Ngay.ToString("dd/MM"))
+        )
+    );
+
+    const revenueData = @Html.Raw(
+        Newtonsoft.Json.JsonConvert.SerializeObject(
+            (Model.DoanhThuTuan ?? new List<DA_LTW.Models.ChartItem>())
+                .Select(x => x.Tong)
+        )
+    );
+
+    // --- Tỷ lệ loại món ---
+    const tyLeLoaiMonRaw = @Html.Raw(
+        Newtonsoft.Json.JsonConvert.SerializeObject(Model.TyLeLoaiMon ?? new List<DA_LTW.Models.ChartItem>())
+    );
+
+    const loaiList = tyLeLoaiMonRaw || [];
+    const loaiLabels = loaiList.map(i => i.Ten || "(Không tên)");
+    const loaiData = loaiList.map(i => i.Tong || 0);
+
+    // ===== Chart: Doanh thu =====
+    (function() {
+        const ctx = document.getElementById('chartRevenue').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: revenueLabels,
+                datasets: [{
+                    label: 'Doanh thu (VNĐ)',
+                    data: revenueData,
+                    borderColor: '#28a745',
+                    backgroundColor: 'rgba(40, 167, 69, 0.2)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 3 // Giảm kích thước điểm
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Quan trọng: cho phép điều chỉnh kích thước
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " VNĐ";
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            font: {
+                                size: 10 // Giảm font size trục y
+                            }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 10 // Giảm font size trục x
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    // ===== Chart: Tỷ lệ loại món =====
+    (function() {
+        const ctx = document.getElementById('chartLoaiMon').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: loaiLabels,
+                datasets: [{
+                    data: loaiData,
+                    backgroundColor: [
+                        '#007bff','#28a745','#ffc107','#dc3545','#6c757d','#6f42c1','#fd7e14'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Quan trọng: cho phép điều chỉnh kích thước
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 10 // Giảm font size chú thích
+                            },
+                            boxWidth: 12 // Giảm kích thước ô màu
+                        }
+                    }
+                }
+            }
+        });
+    })();
+    </script>
+}

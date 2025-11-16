@@ -1,0 +1,29 @@
+﻿@model DA_LTW.Models.LOAIMON
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<h2>Thêm loại món</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label class="form-label fw-bold">Mã loại</label>
+        @Html.TextBoxFor(m => m.MaLoai, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label class="form-label fw-bold">Tên loại</label>
+        @Html.TextBoxFor(m => m.TenLoai, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+}
+
+<div>
+    @Html.ActionLink("Trở lại", "Index")
+</div>

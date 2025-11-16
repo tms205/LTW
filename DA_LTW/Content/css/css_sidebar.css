@@ -1,10 +1,15 @@
 ﻿<style >
 .sidebar-admin {
-    background: #ffffff;
-    border-right: 1px solid #e0e0e0;
-    height: 100%;
-    padding-top: 20px;
-    border-radius: 8px;
+    position: fixed !important; /* Cố định sidebar */
+    top: 0; /* Bắt đầu từ top */
+    left: 0; /* Bắt đầu từ left */
+    height: 100vh; /* Chiều cao full màn hình */
+    overflow-x: visible !important;
+    overflow-y: auto;
+    width: 250px; /* Hoặc chiều rộng hiện tại của bạn */
+    background-color: #f8f9fa; /* Màu nền */
+    z-index: 1000; /* Đảm bảo sidebar ở trên cùng */
+    /* Giữ các thuộc tính hiện tại của bạn */
 }
 
 .sidebar-admin a {
@@ -33,5 +38,46 @@
 .sidebar-admin i {
     width: 22px;
 }
+
+
+/* CSS cho dropdown menu */
+
+/* Khung tổng */
+.dropdown-loaimon {
+    position: relative;
+    z-index: 3000 !important;
+}
+
+/* Menu con bay sang phải */
+.dropdown-menu-right {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #1f3b57;
+    min-width: 180px;
+    display: none;
+    padding: 10px 0;
+    border-radius: 4px;
+    z-index: 9999 !important; /* GIÚP MENU NỔI HẲN LÊN TRÊN */
+    overflow: visible !important;
+}
+
+/* Hover vào mục cha → show menu phải */
+.dropdown-loaimon:hover .dropdown-menu-right {
+    display: block;
+}
+
+/* Style item trong menu con */
+.dropdown-menu-right a {
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+    .dropdown-menu-right a:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
 
 </style >

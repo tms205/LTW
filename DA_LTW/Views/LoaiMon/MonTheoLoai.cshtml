@@ -1,0 +1,28 @@
+﻿@model IEnumerable<DA_LTW.Models.MONAN>
+
+@{
+    ViewBag.Title = "Món theo loại";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<h2 class="mb-3">Danh sách món thuộc loại: <span class="text-primary">@ViewBag.TenLoai</span></h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+
+                <img src="@item.HinhAnh" style="height:180px;object-fit:cover" class="card-img-top" />
+
+                <div class="card-body">
+                    <h5>@item.TenMon</h5>
+                    <p><b>Giá:</b> @string.Format("{0:N0}", item.Gia) VNĐ</p>
+
+                    <a href="/MonAn/Details/@item.MaMon" class="btn btn-primary btn-sm">Chi tiết</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

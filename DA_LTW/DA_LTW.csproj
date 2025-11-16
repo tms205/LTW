@@ -130,11 +130,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoaiMonController.cs" />
     <Compile Include="Controllers\MonAnController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\LoaiMonHelper.cs" />
     <Compile Include="Models\BANAN.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
@@ -144,6 +147,7 @@
     <Compile Include="Models\CHITIET_NHAPKHO.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DashboardViewModel.cs" />
     <Compile Include="Models\DATBAN.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
@@ -214,10 +218,16 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\css_dashboard.css" />
+    <Content Include="Content\css\css_delete.css" />
     <Content Include="Content\css\css_detail.css" />
     <Content Include="Content\css\css_create.css" />
+    <Content Include="Content\css\css_edit.css" />
     <Content Include="Content\css\css_sidebar.css" />
-    <Content Include="Content\Img\Logo.png" />
+    <Content Include="Content\img\Logo.png" />
+    <Content Include="Content\img\monan\comchien.png" />
+    <Content Include="Content\img\monan\micay.png" />
+    <Content Include="Content\img\monan\phobo.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -278,6 +288,14 @@
     <Content Include="Views\Shared\_Partial_Sidebar_Admin.cshtml" />
     <Content Include="Views\MonAn\Details.cshtml" />
     <Content Include="Views\MonAn\Create.cshtml" />
+    <Content Include="Views\MonAn\Edit.cshtml" />
+    <Content Include="Views\MonAn\Delete.cshtml" />
+    <Content Include="Views\LoaiMon\Index.cshtml" />
+    <Content Include="Views\LoaiMon\MonTheoLoai.cshtml" />
+    <Content Include="Views\LoaiMon\Create.cshtml" />
+    <Content Include="Views\LoaiMon\Edit.cshtml" />
+    <Content Include="Views\LoaiMon\Delete.cshtml" />
+    <Content Include="Views\DashBoard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

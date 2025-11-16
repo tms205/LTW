@@ -2,7 +2,7 @@
 
 <div class="sidebar-admin">
 
-    <a href="/Admin/Home" class="active">
+    <a href="#" class="active">
         <i class="fas fa-tachometer-alt"></i> Dashboard
     </a>
 
@@ -10,9 +10,21 @@
         <i class="fas fa-utensils"></i> Quản lý món ăn
     </a>
 
-    <a href="/LoaiMon/Index">
-        <i class="fas fa-list"></i> Quản lý loại món
-    </a>
+    <!-- Dropdown dạng hover -->
+    <div class="dropdown-loaimon">
+        <a href="/LoaiMon/Index" class="dropdown-btn">
+            <i class="fas fa-list"></i> Quản lý loại món
+        </a>
+
+        <!-- Menu con bay sang phải -->
+        <div class="dropdown-menu-right">
+            @foreach (var loai in DA_LTW.Helpers.LoaiMonHelper.GetAll())
+            {
+                <a href="/LoaiMon/MonTheoLoai/@loai.MaLoai">@loai.TenLoai</a>
+            }
+        </div>
+    </div>
+
 
     <a href="/DonHang/Index">
         <i class="fas fa-receipt"></i> Quản lý đơn hàng

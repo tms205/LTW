@@ -1,33 +1,57 @@
-﻿
-
-
-<header class="bg-light border-bottom">
+﻿<header class="bg-white shadow-sm border-bottom">
     <div class="container py-3 d-flex align-items-center justify-content-between">
-        <!-- Logo -->
+
+        <!-- Logo + Tên hệ thống -->
         <div class="d-flex align-items-center">
             <img src="~/Content/Img/Logo.png" alt="SmartRestaurant Logo"
-                 style="height:80px; width:80px; object-fit:contain; border-radius:70%; border:2px solid #fff; box-shadow:0 0 10px rgba(0,0,0,0.2);"
-                 class="me-2" />
-            <h3 class="m-0 text-dark fw-bold">SmartRestaurant</h3>
+                 style="height:70px; width:70px; object-fit:cover; border-radius:12px;"
+                 class="me-3 shadow-sm" />
+            <div>
+                <h3 class="m-0 fw-bold text-dark">SmartRestaurant</h3>
+                <small class="text-secondary">Hệ thống quản lý nhà hàng</small>
+            </div>
         </div>
-        <!-- Thanh ngôn ngữ và đăng nhập -->
-        <div class="d-flex align-items-center">
-            <!-- Đổi ngôn ngữ -->
-            <a href="?lang=vi" class="text-secondary me-3">🇻🇳 VI</a>
-            <a href="?lang=en" class="text-secondary me-3">🇺🇸 EN</a>
 
-            <!-- Đăng nhập / Đăng ký -->
+        <!-- Menu quản trị -->
+        <nav class="d-none d-md-flex">
+            <a href="/DashBoard" class="nav-link text-dark fw-semibold me-4">🏠 Trang chủ</a>
+            <a href="/MonAn" class="nav-link text-dark fw-semibold me-4">🍽 Món ăn</a>
+            <a href="/LoaiMon" class="nav-link text-dark fw-semibold me-4">📂 Loại món</a>
+            <a href="/NhanVien" class="nav-link text-dark fw-semibold me-4">👨‍🍳 Nhân viên</a>
+            <a href="/BaoCao" class="nav-link text-dark fw-semibold me-4">📊 Báo cáo</a>
+        </nav>
+
+        <!-- User info -->
+        <div class="d-flex align-items-center">
+
             @if (Session["UserRole"] == null)
             {
                 <a href="/TaiKhoan/DangNhap" class="btn btn-outline-primary btn-sm me-2">Đăng nhập</a>
-                <a href="/TaiKhoan/DangKy" class="btn btn-primary btn-sm">Đăng ký</a>
             }
             else
             {
-                <span class="me-3">👋 Xin chào, <b>@Session["Username"]</b></span>
-                <a href="/TaiKhoan/DangXuat" class="btn btn-outline-danger btn-sm">Đăng xuất</a>
+                <div class="text-end me-3">
+                    <div class="fw-semibold">👋 Xin chào, @Session["Username"]</div>
+                    <small class="text-secondary">
+                        Vai trò: <b>@Session["UserRole"]</b>
+                    </small>
+                </div>
+
+                <a href="/TaiKhoan/DangXuat" class="btn btn-danger btn-sm">
+                    Đăng xuất
+                </a>
             }
+        </div>
+
+    </div>
+
+    <!-- Dòng menu phụ trên mobile -->
+    <div class="bg-light border-top d-md-none py-2">
+        <div class="container d-flex justify-content-around small fw-semibold">
+            <a href="/TrangChu" class="text-dark">Trang chủ</a>
+            <a href="/MonAn" class="text-dark">Món ăn</a>
+            <a href="/LoaiMon" class="text-dark">Loại món</a>
+            <a href="/BaoCao" class="text-dark">Báo cáo</a>
         </div>
     </div>
 </header>
-
