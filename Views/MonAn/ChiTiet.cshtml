@@ -1,0 +1,116 @@
+﻿@model DA_LTW.Models.MONAN
+
+@{
+    ViewBag.Title = "Chi tiết món ăn";
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+    var monLienQuan = ViewBag.MonLienQuan as IEnumerable<DA_LTW.Models.MONAN>;
+}
+
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Thông tin món chính -->
+        <div class="col-lg-5">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body d-flex flex-column">
+                    <div class="mb-3 text-center">
+                        <span class="badge bg-danger px-3 py-2 text-uppercase mb-2">Best choice</span>
+                        <h2 class="fw-bold text-primary mb-0">@Model.TenMon</h2>
+                    </div>
+                    <div class="text-center mb-3">
+                        <img src="@Model.HinhAnh"
+                             alt="@Model.TenMon"
+                             class="img-fluid rounded-3 shadow-sm"
+                             style="max-height: 320px; object-fit: cover;" />
+                    </div>
+                    <div class="mt-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="text-muted">Giá bán</span>
+                            <span class="fs-3 fw-bold text-success">
+                                @string.Format("{0:N0} đ", Model.Gia)
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <small class="text-muted">
+                                Đơn vị: <span class="fw-semibold">@Model.DonViTinh</span>
+                            </small>
+                            <small>
+                                @if (Model.TrangThai == "Còn món")
+                                {
+                                    <span class="badge bg-success">🟢 Còn món</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">⚫ Hết món</span>
+                                }
+                            </small>
+                        </div>
+
+                        <div class="mb-4">
+                            <h6 class="text-uppercase text-muted mb-2">Mô tả món ăn</h6>
+                            <p class="mb-0" style="white-space:pre-line;">
+                                @Model.MoTa
+                            </p>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <!-- Nút cho Thành viên 4 xử lý -->
+                            <a href="@Url.Action("ThemVaoGio", "GioHang", new { id = Model.MaMon })"
+                               class="btn btn-primary btn-lg">
+                                Thêm vào giỏ
+                            </a>
+                            <a href="@Url.Action("Index", "TrangChu")" class="btn btn-outline-secondary">
+                                ← Quay về trang chủ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gợi ý món liên quan -->
+        <div class="col-lg-7">
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+                <h4 class="fw-bold text-dark mb-0">Gợi ý món liên quan</h4>
+                <span class="text-muted small">Các món cùng loại với @Model.TenMon</span>
+            </div>
+
+            @if (monLienQuan != null && monLienQuan.Any())
+            {
+                <div class="row g-3">
+                    @foreach (var item in monLienQuan)
+                    {
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="ratio ratio-4x3">
+                                    <img src="@item.HinhAnh"
+                                         alt="@item.TenMon"
+                                         class="card-img-top rounded-top"
+                                         style="object-fit: cover;" />
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <h6 class="card-title fw-semibold text-truncate">@item.TenMon</h6>
+                                    <p class="mb-1 text-success fw-bold">
+                                        @string.Format("{0:N0} đ", item.Gia)
+                                    </p>
+                                    <p class="card-text text-muted small flex-grow-1" style="max-height: 3rem; overflow: hidden;">
+                                        @item.MoTa
+                                    </p>
+                                    <a href="@Url.Action("ChiTiet", "MonAn", new { id = item.MaMon })"
+                                       class="btn btn-sm btn-outline-primary mt-2">
+                                        Xem chi tiết
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">
+                    Hiện chưa có món liên quan nào cho món ăn này.
+                </div>
+            }
+        </div>
+    </div>
+</div>

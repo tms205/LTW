@@ -1,0 +1,39 @@
+﻿@model IEnumerable<DA_LTW.Models.LOAIMON>
+@{
+    ViewBag.Title = "Quản lý loại món";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<h2>Quản lý loại món</h2>
+
+<p>
+    <a href="/LoaiMon/Create" class="btn btn-success">+ Thêm loại món</a>
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Mã loại</th>
+        <th>Tên loại</th>
+        <th>Số lượng món</th>     
+        <th>Chức năng</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaLoai</td>
+            <td>@item.TenLoai</td>
+
+            <td>
+                @(item.MONANs != null ? item.MONANs.Count() : 0)
+                <!-- Nếu navigation property tên khác thì sửa lại -->
+            </td>
+
+            <td>
+                <a href="/LoaiMon/Edit/@item.MaLoai" class="btn btn-primary">Sửa</a>
+                <a href="/LoaiMon/Delete/@item.MaLoai" class="btn btn-danger">Xóa</a>
+                <a href="/LoaiMon/MonTheoLoai/@item.MaLoai" class="btn btn-info">Xem món</a>
+            </td>
+        </tr>
+    }
+</table>
