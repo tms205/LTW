@@ -1,0 +1,62 @@
+﻿
+@model DA_LTW.Models.TaoDonHangViewModel
+@{
+    ViewBag.Title = "Tạo đơn hàng mới";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+<h2 class="mb-4">Tạo đơn hàng mới</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+        <label>Chọn bàn</label>
+        @Html.DropDownList("MaDatBan", (SelectList)ViewBag.MaDatBan, "-- Chọn bàn --", new { @class = "form-control" })
+    </div>
+
+
+    <div class="form-group">
+        <label>Nhân viên lập hóa đơn</label>
+        @Html.DropDownList("MaNV", (SelectList)ViewBag.MaNV, "-- Chọn nhân viên --", new { @class = "form-control" })
+    </div>
+
+
+    <h4 class="mt-4">Chọn món</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Món ăn</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < ViewBag.MonAn.Count; i++)
+            {
+                <tr>
+                    <td>
+                        @ViewBag.MonAn[i].TenMon
+                        @Html.HiddenFor(m => m.MonDaChon[i].MaMon, new { Value = ViewBag.MonAn[i].MaMon })
+                    </td>
+                    <td>@String.Format("{0:N0} đ", ViewBag.MonAn[i].Gia)</td>
+                    <td>
+                        @Html.TextBoxFor(m => m.MonDaChon[i].SoLuong, new
+                        {
+                            @class = "form-control",
+                            type = "number",
+                            min = 0,
+                            value = 0
+                        })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+    <button type="submit" class="btn btn-success">Tạo hóa đơn</button>
+    <a href="/DonHang/Index" class="btn btn-secondary">Hủy</a>
+}

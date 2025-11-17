@@ -1,0 +1,40 @@
+﻿
+@model DA_LTW.Models.DonHangViewModel
+@{
+    ViewBag.Title = "Chi tiết hóa đơn";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<h2 class="mb-4">Chi tiết hóa đơn @Model.MaHD</h2>
+<div class="card mb-4 p-3">
+    <p><strong>Khách hàng:</strong> @Model.TenKH</p>
+    <p><strong>Bàn:</strong> @Model.TenBan</p>
+    <p><strong>Nhân viên:</strong> @Model.TenNV</p>
+    <p><strong>Ngày lập:</strong> @(Model.NgayLap.HasValue ? Model.NgayLap.Value.ToString("dd/MM/yyyy HH:mm") : "")</p>
+
+</div>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Mã món</th>
+            <th>Tên món</th>
+            <th>Số lượng</th>
+            <th>Đơn giá</th>
+            <th>Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model.ChiTiet)
+        {
+            <tr>
+                <td>@c.MaMon</td>
+                <td>@c.TenMon</td>
+                <td>@c.SoLuong</td>
+                <td>@String.Format("{0:N0} đ", c.DonGia)</td>
+                <td>@String.Format("{0:N0} đ", c.DonGia * c.SoLuong)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h3 class="text-right pr-3">Tổng tiền: <strong>@String.Format("{0:N0} đ", Model.TongTien)</strong></h3>
+<a href="/DonHang/Index" class="btn btn-secondary">Quay lại</a>

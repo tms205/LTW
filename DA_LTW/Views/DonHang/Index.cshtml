@@ -1,0 +1,48 @@
+﻿@model List<DA_LTW.Models.DonHangViewModel>
+@{
+    ViewBag.Title = "Quản lý đơn hàng";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+<h2 class="mb-4">Danh sách đơn hàng</h2>
+<form method="get" class="form-inline mb-3">
+    <input type="text" name="search" value="@ViewBag.Search" class="form-control mr-2" placeholder="Tìm mã đơn hoặc tên khách" />
+    <select name="trangthai" class="form-control mr-2">
+        <option value="">-- Trạng thái --</option>
+        <option value="Đang dùng" @(ViewBag.TrangThai == "Đang dùng" ? "selected" : "")>Đang dùng</option>
+        <option value="Đã thanh toán" @(ViewBag.TrangThai == "Đã thanh toán" ? "selected" : "")>Đã thanh toán</option>
+        <option value="Hủy" @(ViewBag.TrangThai == "Hủy" ? "selected" : "")>Hủy</option>
+    </select>
+    <button class="btn btn-primary">Lọc</button>
+</form>
+<table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th>Mã HD</th>
+            <th>Khách hàng</th>
+            <th>Bàn</th>
+            <th>Nhân viên</th>
+            <th>Ngày lập</th>
+            <th>Tổng tiền</th>
+            <th>Thanh toán</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaHD</td>
+                <td>@item.TenKH</td>
+                <td>@item.TenBan</td>
+                <td>@item.TenNV</td>
+                <td>@(item.NgayLap?.ToString("dd/MM/yyyy HH:mm"))</td>
+                <td>@String.Format("{0:N0} đ", item.TongTien)</td>
+                <td>@item.PhuongThucTT</td>
+                <td>
+                    <a href="/DonHang/Detail/@item.MaHD" class="btn btn-info btn-sm">Chi tiết</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/DonHang/Create" class="btn btn-success">Tạo đơn mới</a>

@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DashBoardController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiMonController.cs" />
     <Compile Include="Controllers\MonAnController.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Models\CHITIET_NHAPKHO.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DonHangViewModel.cs" />
     <Compile Include="Models\DashboardViewModel.cs" />
     <Compile Include="Models\DATBAN.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
@@ -282,7 +284,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDoAn.cshtml" />
     <Content Include="Views\Shared\_Partial_Footer.cshtml" />
-    <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Shared\_Partial_Header.cshtml" />
     <Content Include="Views\MonAn\Index.cshtml" />
     <Content Include="Views\Shared\_Partial_Sidebar_Admin.cshtml" />
@@ -296,6 +297,9 @@
     <Content Include="Views\LoaiMon\Edit.cshtml" />
     <Content Include="Views\LoaiMon\Delete.cshtml" />
     <Content Include="Views\DashBoard\Index.cshtml" />
+    <Content Include="Views\DonHang\Index.cshtml" />
+    <Content Include="Views\DonHang\Detail.cshtml" />
+    <Content Include="Views\DonHang\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
