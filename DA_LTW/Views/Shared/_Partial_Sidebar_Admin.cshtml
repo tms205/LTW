@@ -1,41 +1,31 @@
 ﻿<link href="~/Content/css/css_sidebar.css" rel="stylesheet" />
 
 <div class="sidebar-admin">
-
-    <a href="/DashBoard/Index" class="active">
-        <i class="fas fa-tachometer-alt"></i> Tổng quan
+    <a href="/Home/Index" class="@(ViewBag.ActiveMenu == "Dashboard" ? "active" : "")">
+        <i class="fas fa-tachometer-alt"></i> Dashboard
     </a>
 
-    <a href="/MonAn/Index">
+    <a href="/MonAn/Index" class="@(ViewBag.ActiveMenu == "MonAn" ? "active" : "")">
         <i class="fas fa-utensils"></i> Quản lý món ăn
     </a>
 
-    <!-- Dropdown dạng hover -->
-    <div class="dropdown-loaimon">
-        <a href="/LoaiMon/Index" class="dropdown-btn">
-            <i class="fas fa-list"></i> Quản lý loại món
-        </a>
+    <a href="/LoaiMon/Index" class="@(ViewBag.ActiveMenu == "LoaiMon" ? "active" : "")">
+        <i class="fas fa-list"></i> Quản lý loại món
+    </a>
 
-        <!-- Menu con bay sang phải -->
-        <div class="dropdown-menu-right">
-            @foreach (var loai in DA_LTW.Helpers.LoaiMonHelper.GetAll())
-            {
-                <a href="/LoaiMon/MonTheoLoai/@loai.MaLoai">@loai.TenLoai</a>
-            }
-        </div>
-    </div>
-
-
-    <a href="/DonHang/Index">
+    <a href="/DonHang/Index" class="@(ViewBag.ActiveMenu == "DonHang" ? "active" : "")">
         <i class="fas fa-receipt"></i> Quản lý đơn hàng
     </a>
 
-    <a href="/NhanVien/Index">
-        <i class="fas fa-users"></i> Nhân viên
+    <a href="/Ban/Index" class="@(ViewBag.ActiveMenu == "Ban" ? "active" : "")">
+        <i class="fas fa-chair"></i> Quản lý bàn
+    </a>
+
+    <a href="/NhanVien/Index" class="@(ViewBag.ActiveMenu == "NhanVien" ? "active" : "")">
+        <i class="fas fa-users"></i> Quản lý nhân viên
     </a>
 
     <a href="/Account/Logout">
         <i class="fas fa-sign-out-alt"></i> Đăng xuất
     </a>
-
 </div>

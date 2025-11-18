@@ -1,0 +1,75 @@
+﻿@model DA_LTW.Models.LOAIMON
+
+@{
+    ViewBag.Title = "Sửa loại món";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="fw-bold text-primary">Sửa loại món</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="@Url.Action("Index", "LoaiMon")">Danh sách loại món</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Sửa loại món</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="card-title mb-0">
+                        <i class="fas fa-edit me-2"></i>
+                        Chỉnh sửa loại món
+                    </h4>
+                </div>
+
+                <div class="card-body p-4">
+
+                    @using (Html.BeginForm("Edit", "LoaiMon", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <!-- Hiển thị mã loại (MaLoai). Mặc định readonly.
+                             Nếu muốn cho phép thay đổi mã thì bỏ thuộc tính readonly. -->
+                        <div class="form-group mb-3">
+                            @Html.LabelFor(m => m.MaLoai, "Mã loại", new { @class = "form-label fw-bold" })
+                            @Html.TextBoxFor(m => m.MaLoai, new
+                            {
+                                @class = "form-control",
+                                @readonly = "readonly"
+                            })
+                            @Html.ValidationMessageFor(m => m.MaLoai, "", new { @class = "text-danger small" })
+                        </div>
+
+                        <div class="form-group mb-3">
+                            @Html.LabelFor(m => m.TenLoai, "Tên loại món", new { @class = "form-label fw-bold" })
+                            @Html.TextBoxFor(m => m.TenLoai, new
+                            {
+                                @class = "form-control form-control-lg",
+                                placeholder = "Nhập tên loại món"
+                            })
+                            @Html.ValidationMessageFor(m => m.TenLoai, "", new { @class = "text-danger small" })
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a href="@Url.Action("Index", "LoaiMon")" class="btn btn-secondary btn-lg">
+                                ← Quay lại
+                            </a>
+
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-save me-2"></i>
+                                Cập nhật
+                            </button>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

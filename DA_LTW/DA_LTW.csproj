@@ -130,15 +130,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\DashBoardController.cs" />
-    <Compile Include="Controllers\DonHangController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoaiMonController.cs" />
     <Compile Include="Controllers\MonAnController.cs" />
+    <Compile Include="Controllers\TaiKhoanController.cs" />
+    <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\LoaiMonHelper.cs" />
     <Compile Include="Models\BANAN.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
@@ -148,8 +145,6 @@
     <Compile Include="Models\CHITIET_NHAPKHO.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\DonHangViewModel.cs" />
-    <Compile Include="Models\DashboardViewModel.cs" />
     <Compile Include="Models\DATBAN.cs">
       <DependentUpon>DB_NhaHang.tt</DependentUpon>
     </Compile>
@@ -220,16 +215,30 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\css\css_dashboard.css" />
-    <Content Include="Content\css\css_delete.css" />
     <Content Include="Content\css\css_detail.css" />
     <Content Include="Content\css\css_create.css" />
-    <Content Include="Content\css\css_edit.css" />
     <Content Include="Content\css\css_sidebar.css" />
-    <Content Include="Content\img\Logo.png" />
-    <Content Include="Content\img\monan\comchien.png" />
-    <Content Include="Content\img\monan\micay.png" />
-    <Content Include="Content\img\monan\phobo.png" />
+    <Content Include="Content\Img\banner1.jpg" />
+    <Content Include="Content\Img\banner2.jpg" />
+    <Content Include="Content\Img\banner3.jpg" />
+    <Content Include="Content\Img\Logo.png" />
+    <Content Include="Content\Scripts\bootstrap.bundle.js" />
+    <Content Include="Content\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Content\Scripts\bootstrap.esm.js" />
+    <Content Include="Content\Scripts\bootstrap.esm.min.js" />
+    <Content Include="Content\Scripts\bootstrap.js" />
+    <Content Include="Content\Scripts\bootstrap.min.js" />
+    <None Include="Content\Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Content\Scripts\jquery-3.7.0.js" />
+    <Content Include="Content\Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Content\Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Content\Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery.validate.js" />
+    <Content Include="Content\Scripts\jquery.validate.min.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\Scripts\modernizr-2.8.3.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -243,12 +252,6 @@
       <DependentUpon>DB_NhaHang.edmx</DependentUpon>
       <LastGenOutput>DB_NhaHang.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\site.cshtml" />
     <EntityDeploy Include="Models\DB_NhaHang.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -257,17 +260,14 @@
     <Content Include="Models\DB_NhaHang.edmx.diagram">
       <DependentUpon>DB_NhaHang.edmx</DependentUpon>
     </Content>
-    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
-    <Content Include="Scripts\jquery-3.7.0.js" />
-    <Content Include="Scripts\jquery-3.7.0.min.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Content\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\Scripts\bootstrap.esm.js.map" />
+    <Content Include="Content\Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Content\Scripts\bootstrap.js.map" />
+    <Content Include="Content\Scripts\bootstrap.min.js.map" />
+    <Content Include="Content\Scripts\jquery-3.7.0.min.map" />
+    <Content Include="Content\Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -279,30 +279,24 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDoAn.cshtml" />
     <Content Include="Views\Shared\_Partial_Footer.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Shared\_Partial_Header.cshtml" />
     <Content Include="Views\MonAn\Index.cshtml" />
     <Content Include="Views\Shared\_Partial_Sidebar_Admin.cshtml" />
     <Content Include="Views\MonAn\Details.cshtml" />
     <Content Include="Views\MonAn\Create.cshtml" />
-    <Content Include="Views\MonAn\Edit.cshtml" />
-    <Content Include="Views\MonAn\Delete.cshtml" />
-    <Content Include="Views\LoaiMon\Index.cshtml" />
-    <Content Include="Views\LoaiMon\MonTheoLoai.cshtml" />
-    <Content Include="Views\LoaiMon\Create.cshtml" />
-    <Content Include="Views\LoaiMon\Edit.cshtml" />
-    <Content Include="Views\LoaiMon\Delete.cshtml" />
-    <Content Include="Views\DashBoard\Index.cshtml" />
-    <Content Include="Views\DonHang\Index.cshtml" />
-    <Content Include="Views\DonHang\Detail.cshtml" />
-    <Content Include="Views\DonHang\Create.cshtml" />
+    <Content Include="Views\Shared\_Partial_Header_Guest.cshtml" />
+    <Content Include="Views\Shared\_Partial_Footer_Guest.cshtml" />
+    <Content Include="Views\Shared\_GuestLayout.cshtml" />
+    <Content Include="Views\TrangChu\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutTrangChu.cshtml" />
+    <Content Include="Views\Shared\_Partial_Banner_Guest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TaiKhoan\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -322,14 +316,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="packages.config" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="Scripts\bootstrap.esm.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

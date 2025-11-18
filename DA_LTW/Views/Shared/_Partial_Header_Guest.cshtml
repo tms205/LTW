@@ -1,0 +1,66 @@
+﻿@using DA_LTW.Models
+@{
+    QL_NHAHANGEntities db = new QL_NHAHANGEntities();
+    var loaiMonList = db.LOAIMONs.ToList();
+}
+
+<header class="border-bottom shadow-sm" style="background-color: #006600;">
+    <div class="container py-3 d-flex align-items-center justify-content-between">
+
+        <div class="d-flex align-items-center">
+            <a href="/" class="d-flex align-items-center text-decoration-none">
+                <img src="@Url.Content("~/Content/Img/Logo.png")" alt="SmartRestaurant Logo"
+                     style="height:70px; width:70px; object-fit:contain; border-radius:50%; border:2px solid #fff; box-shadow:0 0 10px rgba(0,0,0,0.2);"
+                     class="me-2" />
+                <h3 class="m-0 fw-bold" style="color: #FFEFDB">SmartRestaurant</h3>
+            </a>
+        </div>
+
+        <nav>
+            <ul class="nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #FFEFDB">
+                        Menu món ăn
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        @foreach (var loai in loaiMonList)
+                        {
+                            <li>
+                                <a class="dropdown-item" href="@Url.Action("Index", "MonAn", new { loaiId = loai.MaLoai })">
+                                    @loai.TenLoai
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" style="color: #FFEFDB" href="/GioHang">Giỏ hàng</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="d-flex align-items-center">
+
+            <form action="/TaiKhoan/TimKiem" method="get" class="d-flex me-3">
+                <input type="text" name="keyword" class="form-control form-control-sm" placeholder="Tìm món...">
+                <button type="submit" class="btn btn-outline-light btn-sm ms-2">Tìm</button>
+            </form>
+
+            <a href="?lang=vi" class="text-white me-2">VI</a>
+            <a href="?lang=en" class="text-white me-3">EN</a>
+
+            @if (Session["UserRole"] == null)
+            {
+                <a href="/TaiKhoan/DangNhap" class="btn btn-outline-light btn-sm me-2">Đăng nhập</a>
+                <a href="/TaiKhoan/DangKy" class="btn btn-light btn-sm">Đăng ký</a>
+            }
+            else
+            {
+                <span class="me-3">👋 Xin chào, <b>@Session["Username"]</b></span>
+                <a href="/TaiKhoan/DangXuat" class="btn btn-outline-danger btn-sm">Đăng xuất</a>
+            }
+        </div>
+    </div>
+</header>

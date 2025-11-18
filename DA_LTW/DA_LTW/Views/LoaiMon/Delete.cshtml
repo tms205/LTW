@@ -1,0 +1,51 @@
+﻿@model DA_LTW.Models.LOAIMON
+
+@{
+    ViewBag.Title = "Xóa Loại Món";
+    Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
+}
+
+<!-- Gọi CSS riêng -->
+<link href="~/Content/css/delete-style.css" rel="stylesheet" />
+
+<div class="delete-container">
+    <!-- Header -->
+    <div class="delete-header">
+        <h2>🗑️ Xóa Loại Món</h2>
+        <h3>Bạn có chắc chắn muốn xóa loại món này?</h3>
+    </div>
+
+    <!-- Thông báo cảnh báo -->
+    <div class="warning-alert">
+        <strong>⚠️ Cảnh báo!</strong>
+        Hành động này không thể hoàn tác. Tất cả dữ liệu liên quan đến loại món này sẽ bị xóa vĩnh viễn.
+    </div>
+
+    <!-- Thông tin chi tiết -->
+    <div class="delete-content">
+        <div class="info-card">
+            <div class="info-item">
+                <span class="info-label">Mã loại món:</span>
+                <span class="info-value">@Html.DisplayFor(model => model.MaLoai)</span>
+            </div>
+
+            <div class="info-item">
+                <span class="info-label">Tên loại món:</span>
+                <span class="info-value">@Html.DisplayFor(model => model.TenLoai)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form xóa -->
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="delete-actions">
+            <button type="submit" class="btn-delete">
+                🗑️ Xóa
+            </button>
+            @Html.ActionLink("↩️ Quay lại", "Index", null, new { @class = "btn-cancel" })
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@* Layout dành cho quản lý *@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Admin | SmartRestaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/admin.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark text-white" id="sidebar-wrapper">
+            <div class="sidebar-heading p-3 border-bottom fw-bold">SmartRestaurant</div>
+            <div class="list-group list-group-flush">
+                <a href="/MonAn" class="list-group-item list-group-item-action bg-dark text-white">🍜 Món ăn</a>
+                <a href="/LoaiMon" class="list-group-item list-group-item-action bg-dark text-white">📂 Loại món</a>
+                <a href="/Ban" class="list-group-item list-group-item-action bg-dark text-white">🪑 Bàn</a>
+                <a href="/DonHang" class="list-group-item list-group-item-action bg-dark text-white">🧾 Đơn hàng</a>
+                <a href="/ThongKe" class="list-group-item list-group-item-action bg-dark text-white">📊 Thống kê</a>
+                <a href="/TaiKhoan/PhanQuyen" class="list-group-item list-group-item-action bg-dark text-white">🔐 Tài khoản</a>
+            </div>
+        </div>
+
+        <!-- Nội dung -->
+        <div id="page-content-wrapper" class="flex-grow-1">
+            <nav class="navbar navbar-light bg-light border-bottom shadow-sm">
+                <div class="container-fluid">
+                    <span class="navbar-text">Xin chào, @Session["Username"] (@Session["UserRole"])</span>
+                    <a href="/TaiKhoan/DangXuat" class="btn btn-outline-danger btn-sm">Đăng xuất</a>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                @RenderBody()
+            </div>
+
+            <footer class="bg-light text-center py-2 border-top mt-4">
+                <span class="text-muted small">
+                    © @DateTime.Now.Year SmartRestaurant Admin | Quản lý nhà hàng thông minh
+                </span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
