@@ -6,6 +6,7 @@
 }
 
 <h2 class="mb-4">Danh sách món ăn</h2>
+
 <p>
     @Html.ActionLink("➕ Thêm món mới", "Create", null, new { @class = "btn btn-primary mb-3" })
 </p>
@@ -15,17 +16,16 @@
     {
         <div class="col-md-4 mb-4">
             <div class="card shadow-sm" style="border-radius: 10px;">
-                @if (!string.IsNullOrEmpty(item.HinhAnh))
+
+                <!-- Nếu bạn có hình món ăn -->
+                @*@if (!string.IsNullOrEmpty(item.HinhAnh))
                 {
-                    <img src="@Url.Content(item.HinhAnh)" class="card-img-top"
-                         style="height: 180px; object-fit: cover;" />
+                    <img src="@item.HinhAnh" class="card-img-top" style="height: 180px; object-fit: cover;" />
                 }
                 else
                 {
-                    <img src="@Url.Content("~/Content/no-image.png")" class="card-img-top"
-                         style="height: 180px; object-fit: cover;" />
-                }
-
+                    <img src="/Content/no-image.png" class="card-img-top" style="height: 180px; object-fit: cover;" />
+                }*@
 
                 <div class="card-body">
                     <h5 class="card-title">@item.TenMon</h5>

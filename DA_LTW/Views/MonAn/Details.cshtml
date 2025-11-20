@@ -5,6 +5,8 @@
     Layout = "~/Views/Shared/_LayoutDoAn.cshtml";
     
 }
+
+
 <div class="container-fluid">
     <div class="row mb-4">
         <div class="col-12">
@@ -46,7 +48,7 @@
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label class="form-label fw-bold text-muted">Mô tả món ăn</label>
-                            <p class="form-control-plaintext border-bottom pb-2">@Model.MoTa</p>
+                            <p class="form-control-plaintext border-bottom pb-2">@Model.HinhAnh</p>
                         </div>
                     </div>
 
@@ -99,11 +101,11 @@
                 <div class="card-footer bg-light py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            @Html.ActionLink("✏️ Sửa thông tin", "Edit", new { id = Model.MaMon }, new { @class = "btn btn-warning me-2" })
-                            @Html.ActionLink("🗑️ Xóa", "Delete", new { id = Model.MaMon }, new { @class = "btn btn-danger" })
+                            @Html.ActionLink("← Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
                         </div>
                         <div>
-                            @Html.ActionLink("← Quay lại danh sách", "Index", null, new { @class = "btn btn-secondary" })
+                            @Html.ActionLink("✏️ Sửa thông tin", "Edit", new { id = Model.MaMon }, new { @class = "btn btn-warning me-2" })
+                            @Html.ActionLink("🗑️ Xóa", "Delete", new { id = Model.MaMon }, new { @class = "btn btn-danger" })
                         </div>
                     </div>
                 </div>
