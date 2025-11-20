@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\users\\user\\desktop\\da_ltw\\da_ltw\\views\\loaimon\\montheoloai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\loaimon\\montheoloai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -11,15 +23,15 @@
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\loaimon\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\users\\user\\desktop\\da_ltw\\da_ltw\\views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\users\\user\\desktop\\da_ltw\\da_ltw\\views\\monan\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\monan\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\users\\user\\desktop\\da_ltw\\da_ltw\\views\\monan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\monan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\monan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -29,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|c:\\users\\user\\desktop\\da_ltw\\da_ltw\\views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_sidebar_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\donhang\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -45,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\models\\donhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:models\\donhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -79,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:content\\css\\css_dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\shared\\_partial_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\views\\loaimon\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2D580386-AB83-4330-8E20-A106683FFF32}|DA_LTW.csproj|solutionrelative:views\\loaimon\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -94,24 +94,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MonTheoLoai.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\LoaiMon\\MonTheoLoai.cshtml",
               "RelativeDocumentMoniker": "Views\\LoaiMon\\MonTheoLoai.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\LoaiMon\\MonTheoLoai.cshtml",
               "RelativeToolTip": "Views\\LoaiMon\\MonTheoLoai.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-17T03:15:43.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\MonAn\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Delete.cshtml",
@@ -119,12 +119,11 @@
               "RelativeToolTip": "Views\\MonAn\\Delete.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAAABUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T03:08:35.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T03:08:35.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\MonAn\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Edit.cshtml",
@@ -132,12 +131,11 @@
               "RelativeToolTip": "Views\\MonAn\\Edit.cshtml",
               "ViewState": "AgIAAFoAAAAAAAAAAAAAAHAAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T03:06:46.366Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T03:06:46.366Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\MonAn\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\MonAn\\Details.cshtml",
@@ -145,12 +143,11 @@
               "RelativeToolTip": "Views\\MonAn\\Details.cshtml",
               "ViewState": "AgIAAFEAAAAAAAAAAAAAAF8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T03:00:44.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T03:00:44.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "DonHangController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Controllers\\DonHangController.cs",
               "RelativeDocumentMoniker": "Controllers\\DonHangController.cs",
@@ -162,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\DonHang\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\DonHang\\Create.cshtml",
@@ -174,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\DonHang\\Detail.cshtml",
               "RelativeDocumentMoniker": "Views\\DonHang\\Detail.cshtml",
@@ -182,12 +179,11 @@
               "RelativeToolTip": "Views\\DonHang\\Detail.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T02:01:42.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T02:01:42.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\DonHang\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DonHang\\Index.cshtml",
@@ -195,12 +191,11 @@
               "RelativeToolTip": "Views\\DonHang\\Index.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-17T02:00:37.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-17T02:00:37.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "DonHangViewModel.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Models\\DonHangViewModel.cs",
               "RelativeDocumentMoniker": "Models\\DonHangViewModel.cs",
@@ -212,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "css_delete.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Content\\css\\css_delete.css",
               "RelativeDocumentMoniker": "Content\\css\\css_delete.css",
@@ -224,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "css_dashboard.css",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Content\\css\\css_dashboard.css",
               "RelativeDocumentMoniker": "Content\\css\\css_dashboard.css",
@@ -236,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\DashBoard\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DashBoard\\Index.cshtml",
@@ -248,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DashboardViewModel.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Models\\DashboardViewModel.cs",
               "RelativeDocumentMoniker": "Models\\DashboardViewModel.cs",
@@ -260,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "DashBoardController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Controllers\\DashBoardController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashBoardController.cs",
@@ -272,19 +267,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 0,
               "Title": "_Partial_Header.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_Partial_Header.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Header.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_Partial_Header.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Partial_Header.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T04:16:36.979Z"
+              "WhenOpened": "2025-11-16T04:16:36.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "_Partial_Footer.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_Partial_Footer.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Footer.cshtml",
@@ -292,11 +288,12 @@
               "RelativeToolTip": "Views\\Shared\\_Partial_Footer.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T04:16:06.398Z"
+              "WhenOpened": "2025-11-16T04:16:06.398Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "_LayoutDoAn.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_LayoutDoAn.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LayoutDoAn.cshtml",
@@ -308,20 +305,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "_Partial_Sidebar_Admin.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
               "ToolTip": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Partial_Sidebar_Admin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-15T13:31:15.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\LoaiMon\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\LoaiMon\\Edit.cshtml",
@@ -329,8 +326,7 @@
               "RelativeToolTip": "Views\\LoaiMon\\Edit.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-15T13:20:02.739Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T13:20:02.739Z"
             },
             {
               "$type": "Document",
@@ -346,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\USER\\Desktop\\DA_LTW\\DA_LTW\\Views\\LoaiMon\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\LoaiMon\\Index.cshtml",
